@@ -1,6 +1,6 @@
 This project is a Todo Application enhanced with drag-and-drop functionality using React DnD. It allows users to reorder tasks intuitively by dragging and dropping them with priority options.
 
-Deployed Link : https://whimsical-bublanina-aca104.netlify.app/
+Deployed Link : https://bejewelled-gaufre-a58a33.netlify.app/
 
 Project Structure: 
 src/
@@ -22,6 +22,7 @@ Features
   Add, edit, and delete tasks.
   Drag-and-drop functionality to reorder tasks.
   Add priority tags accordingly
+  Local Storage for permanent storage(Pending)
 
 Technology Stack
   Frontend: React
