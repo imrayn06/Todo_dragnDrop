@@ -16,3 +16,9 @@
   border: 1px solid #d6d4d4;
   border-radius: 15px;
 }
+body {
+  touch-action: none; /* Prevents default touch behaviors that can interfere with drag-and-drop */
+}
+.main-heading{
+  margin-bottom: 20px;
+}

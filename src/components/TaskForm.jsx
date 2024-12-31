@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import "./TaskForm.css";
 import Tag from "./Tag";
-import { v4 as uuidv4 } from "uuid"; 
-
+import { v4 as uuidv4 } from "uuid";
 
 const TaskForm = ({ setTasks }) => {
-  const [error, setError] = useState(""); 
+  const [error, setError] = useState("");
   const [taskData, setTaskData] = useState({
     task: "",
     status: "todo",
@@ -42,9 +41,9 @@ const TaskForm = ({ setTasks }) => {
     e.preventDefault();
 
     if (taskData.task.trim() === "") {
-      alert("Task cannot be empty.")
-      setError("Task title cannot be empty."); 
-      return; 
+      alert("Task cannot be empty.");
+      setError("Task title cannot be empty.");
+      return;
     }
     const newTask = {
       id: uuidv4(),
@@ -53,12 +52,11 @@ const TaskForm = ({ setTasks }) => {
 
     setTasks((prev) => [...prev, newTask]);
     setTaskData({ task: "", status: "todo", tags: [] });
-    
   };
 
   return (
     <header className="app_header">
-      <form onSubmit={handleSubmit}>
+      <form className="w-100" onSubmit={handleSubmit}>
         <input
           type="text"
           value={taskData.task}
@@ -67,18 +65,18 @@ const TaskForm = ({ setTasks }) => {
           placeholder="Enter your task"
           onChange={handleChange}
         />
-        <div className="task_form_bottom_line">
-          <div>
-            <Tag tagName="HTML" selectTag={selectTag} selected={checkTag("HTML")} />
-            <Tag tagName="CSS" selectTag={selectTag} selected={checkTag("CSS")} />
-            <Tag tagName="JavaScript" selectTag={selectTag} selected={checkTag("JavaScript")} />
-            <Tag tagName="React" selectTag={selectTag} selected={checkTag("React")} />
+        <div className="task_form_bottom_line d-flex flex-column flex-md-row align-items-center mt-3">
+          <div className="mb-3 mb-md-0">
+            <Tag tagName="Low" selectTag={selectTag} selected={checkTag("Low")} />
+            <Tag tagName="Medium" selectTag={selectTag} selected={checkTag("Medium")} />
+            <Tag tagName="High" selectTag={selectTag} selected={checkTag("High")} />
+            <Tag tagName="New" selectTag={selectTag} selected={checkTag("New")} />
           </div>
-          <div>
+          <div className="d-flex align-items-center">
             <select
               name="status"
               value={taskData.status}
-              className="task_status"
+              className="task_status me-2"
               onChange={handleChange}
             >
               <option value="todo">New</option>

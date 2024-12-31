@@ -1,4 +1,4 @@
-This project is a Todo Application enhanced with drag-and-drop functionality using React DnD. It allows users to reorder tasks intuitively by dragging and dropping them.
+This project is a Todo Application enhanced with drag-and-drop functionality using React DnD. It allows users to reorder tasks intuitively by dragging and dropping them with priority options.
 
 Deployed Link : https://whimsical-bublanina-aca104.netlify.app/
 
@@ -21,12 +21,13 @@ src/
 Features
   Add, edit, and delete tasks.
   Drag-and-drop functionality to reorder tasks.
+  Add priority tags accordingly
 
 Technology Stack
   Frontend: React
   Build Tool: Vite
   Drag-and-Drop: React DnD
-  Styling: CSS
+  Styling: CSS, bootstrap
 
 Prerequisites
   Ensure you have the following installed:
